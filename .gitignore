@@ -1,0 +1,4 @@
+/node_modules
+/dist
+.env
+telegram-bot-db.sqlite3
