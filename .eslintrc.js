@@ -87,7 +87,6 @@ module.exports = {
       { blankLine: 'always', prev: ['case', 'default', 'for', 'function', 'if', 'switch', 'while', 'try'], next: '*' },
       { blankLine: 'always', prev: '*', next: ['case', 'default', 'for', 'function', 'if', 'switch'] },
     ],
-    'padded-blocks': ['error', 'never'],
     'space-before-function-paren': ['error', {
       'anonymous': 'never',
       'named': 'never',

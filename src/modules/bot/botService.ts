@@ -1,5 +1,5 @@
 import TelegramBot from 'node-telegram-bot-api';
-import { chatsDb } from './chatsDb';
+import { chatsDb } from '../../services/chatsDb';
 
 export default class BotService {
   static getName(chat: TelegramBot.Chat): string {

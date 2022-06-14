@@ -50,7 +50,7 @@ class ChatsDb {
           console.error(err);
         }
 
-        console.log('Connected to sqlite3 DB');
+        console.log('\x1b[36m', 'Connected to sqlite3 DB', '\x1b[0m');
       });
 
       // https://www.sqlite.org/wal.html
@@ -120,14 +120,14 @@ class ChatsDb {
     });
   }
 
-  async getChatByParams(params: IChatName) {
+  async getChatsByParams(params: IChatName) {
     const whereString = Object.entries(params)
       .map(([key, value]) => `${key} = ${value}`)
       .join(' AND ');
 
     const sql = `SELECT * FROM ${ this.tableName }${ whereString ? ' WHERE ' + whereString : '' };`;
 
-    return await this.getRow(sql);
+    return await this.allRows(sql);
   }
 
   async getChatById(id: number) {
